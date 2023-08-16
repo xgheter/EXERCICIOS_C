@@ -1,3 +1,6 @@
 {
-    "cmake.sourceDirectory": "/workspaces/EXERCICIOS_C"
+    "files.associations": {
+        "EX_TPA_VETOR_7.C": "cpp",
+        "EX_TPA_VETOR_8.C": "cpp"
+    }
 }
