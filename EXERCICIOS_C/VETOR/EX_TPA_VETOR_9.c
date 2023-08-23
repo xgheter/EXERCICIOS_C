@@ -6,7 +6,7 @@ int main(){
         for (int j = i; j < 5; j++) 
         {  
             if (v1[j] < v1[i])
-            {
+        {
                 var = v1[i];
                 v1[i] = v1[j];
                 v1[j] = var;

@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <conio.h>
 int main(){
-	int v[5]={45,-89,32,-12,33},v1[6]={41,72,39,4,35},v2[6]={0,0,0,0,0},x,s,select,i,r,var,n1,j,t,option;
+	int v[5]={45,-89,32,-12,33},v1[6]={41,72,39,4,35},v2[6]={0,0,0,0,0},x,s,select,i,r,var,n1,j,option;
 	float med, n;
 	do{
 			printf("---------Menu----------\n");
@@ -106,7 +105,7 @@ int main(){
                 //code//
 					for(i = 0; i<=4; i++)
 						{
-							if(v[i] % 2 == 1 || v[i] % 2 == -1)
+							if(v[i] % 2 == 1)
 							{
 								printf("%d ",v[i]);		
 							}
@@ -136,7 +135,7 @@ int main(){
                 //code//
 					for (i = 0; i < 5; i++)
 					{
-						if (i%2 == 0)
+						if (i%2 == 0 && i != 0)
 						{
 						printf("%d |",v[i]);
 						} 
@@ -154,19 +153,16 @@ int main(){
 				sleep(2);
                 //code//
 						scanf("%d",&n1);
-						t = 0;
 					for (i = 0; i < 4; i++)
 					{
-						if(v[i] == n1){
-							t = 1;
-						}					
-					}
-						if (t == 1)
+						if (n1==v[i])
 						{
 							printf("true\n");
 						}else{
 							printf("false\n");
 						}
+						
+					}
 					sleep(2);
                 //code//
 				printf("\n");
@@ -292,72 +288,71 @@ int main(){
 				printf("14. Fazer um programa que baseado na forma ('c' para crescente ou 'd' para decrescente) ordene na ordem solicitada.\n");
 				sleep(2);
                 //code//
-		    	
-		    	do {
-			    		printf("Digite 'd' para Decrescente e 'c' para Crescente ou 's' para sair\n");
-			    		option=getch();
-			    		
-			    		switch (option){
-					    case 'c':
-					        for (i = 0; i < 5; i++)
-					    {
-					        for (j = i; j < 5; j++) 
-					        {  
-					            if (v1[j] < v1[i])
-					            {
-					                var = v1[i];
-					                v1[i] = v1[j];
-					                v1[j] = var;
-					            }
-					        } 
-					    }
-					    for (i = 0; i < 5; i++)
-					    {
-					        printf("%d |",v1[i]);
-					    }    
-					        break;
-					    case 'd':
-					        for (i = 0; i < 5; i++)
-					    {
-					        for (j = i; j < 5; j++) 
-					        {  
-					            if (v1[j] > v1[i])
-					            {
-					                var = v1[i];
-					                v1[i] = v1[j];
-					                v1[j] = var;
-					            }
-					        } 
-					    }
-					    for (i = 0; i < 5; i++)
-					    {
-					        printf("%d |",v1[i]);
-					        
-					    }    
-					   		
-					        break;
-					    case 's':
-					    	printf("Saindo....");
-				    }
-				    sleep(2);
-				    system("pause");
-				    system("cls");
-				}while(option != 's');
-			    
+                do {
+					printf("Digite 'D' para Decrescente e 'C' para Crescente\n");
+            		scanf("%d",&option);
+            		
+            			switch (option)
+						{
+							
+							case 'C':
+								for (i = 0; i < 5; i++)
+								{
+									for (j = i; j < 5; j++) 
+									{  
+										if (v1[j] < v1[i])
+										{
+											var = v1[i];
+											v1[i] = v1[j];
+											v1[j] = var;
+										}
+									} 
+								}
+								for (i = 0; i < 5; i++)
+								{
+									printf("%d |",v1[i]);
+								}    
+								break;
+								
+							case 'D':
+								for (i = 0; i < 5; i++)
+								{
+									for (j = i; j < 5; j++) 
+									{  
+										if (v1[j] > v1[i])
+										{
+											var = v1[i];
+											v1[i] = v1[j];
+											v1[j] = var;
+										}
+									} 
+								}
+								for (i = 0; i < 5; i++)
+								{
+									printf("%d |",v1[i]);
+								}    
+						
+								break;
+							default:
+								printf("Digite C ou D");
+								sleep(2);
+						}
+				}while(option == 'C' || 'D');
 
                 //code//
 				printf("\n");
+				system("pause");
 				system("cls");
 			break;
 			case 15:
 				printf("Ex15 selecionado\n");
 				sleep(2);
-				printf("15. Fazer um programa que coloque nas posicoes mais a esquerda os valores pares e mais a direita os impares.\n");
+				printf("15. Fazer um programa que coloque nas posições mais a esquerda os valores pares e mais a direita os impares.\n");
 				sleep(2);
                 //code//
-					for (i = 0; i <= 4; i++)
+					for (i = 0; i < 5; i++)
 						{
-							for (j = i; j <= 4; j++) 
+							for (j = i; j < 5; j++) 
 							{  
 								if (v1[i]%2 == 0)
 								{
@@ -367,8 +362,8 @@ int main(){
 								}
 							} 
 						}
-							printf("%d %d",v1[4],v1[3]);
-							printf("%8d %d %d",v1[0],v1[1],v1[2],v[5]);
+							printf("%d %d ",v1[4],v1[3]);
+							printf("%5d %d",v1[0],v1[1]);
                 //code//
 				printf("\n");
 				system("pause");
@@ -380,8 +375,8 @@ int main(){
 				printf("16. Fazer um programa que retorne quantos elementos do vetor estão acima da média.\n");
 				sleep(2);
                 //code//
-            	        int v1[5] = {41,72,39,4,35},v2[5] = {0,0,0,0,0},s=0, r, n= 0, i;
-	    
+                	    int v1[5] = {41,72,39,4,35},v2[5] = {0,0,0,0,0},s=0, r, n= 0, i;
+    
 						for (i = 0; i < 5; i++)
 					    {
 					        s = s + v1[i];
