@@ -7,6 +7,8 @@ int main(){
         if (n1==v[i])
         {
             printf("true");
+        }else{
+            printf("false");
         }
         
     }

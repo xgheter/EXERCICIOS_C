@@ -65,7 +65,7 @@
                 <mxCell id="38" value="" style="edgeStyle=none;html=1;" parent="1" source="23" target="37" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value="v1[j] &amp;lt; v1[i]" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="23" value="v1[j] &amp;gt; v1[i]" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="290" y="640" width="80" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="42" value="" style="edgeStyle=none;html=1;" parent="1" source="37" target="41" edge="1">
