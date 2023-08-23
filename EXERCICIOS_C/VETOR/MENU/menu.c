@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 int main(){
-	int v[5]={45,-89,32,-12,33},v1[5]={41,72,39,4,35},v2[5]={0,0,0,0,0},x,s,select,i;
-	float med;
+	int v[5]={45,-89,32,-12,33},v1[5]={41,72,39,4,35},v2[5]={0,0,0,0,0},x,s,select,i,r;
+	float med, n;
 	do{
 			printf("---------Menu----------\n");
 			printf("1 == Ex1\n");
@@ -40,6 +40,7 @@ int main(){
 				//code//
 					printf("%d", v[0]);
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 2:
@@ -56,6 +57,7 @@ int main(){
 							}
 						}
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 3:
@@ -71,6 +73,7 @@ int main(){
 						}
 						printf("%d ",s);
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 4:
@@ -87,6 +90,7 @@ int main(){
 						med = s / 5.0;
 						printf("media = %.1f ",med);
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 5:
@@ -103,102 +107,220 @@ int main(){
 							}
 						}
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 6:
 				printf("Ex6 selecionado\n");
 				sleep(2);
+				printf("6. fazer um programa que exiba na tela o primeiro e o ultimo elemento do vetor.");
+				sleep(2);
                 //code//
-
+					printf("%d | %d",v[0],v[4]);
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 7:
 				printf("Ex7 selecionado\n");
 				sleep(2);
+				printf("7. Fazer um programa que exiba os elementos cujos índices sejam pares.");
+				sleep(2);
                 //code//
-
+					for (int i = 0; i < 5; i++)
+					{
+						if (i%2 == 0 && i != 0)
+						{
+						printf("%d |",v[i]);
+						} 
+					
+					}
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 8:
 				printf("Ex8 selecionado\n");
 				sleep(2);
+				printf("8. Fazer uma programa que exiba True caso um valor passado por parâmetro exista no vetor, senão False.");
+				sleep(2);
                 //code//
-
+					int n1;
+						scanf("%d",&n1);
+					for (int i = 0; i < 4; i++)
+					{
+						if (n1==v[i])
+						{
+							printf("true");
+						}
+						
+					}
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 9:
 				printf("Ex9 selecionado\n");
 				sleep(2);
+				printf("9. Fazer um programa que ordene os elementos do vetor.\n");
+				sleep(2);
                 //code//
-
+					int var;
+					for (int i = 0; i < 5; i++)
+					{
+						for (int j = i; j < 5; j++) 
+						{  
+							if (v1[j] < v1[i])
+							{
+								var = v1[i];
+								v1[i] = v1[j];
+								v1[j] = var;
+							}
+						} 
+					}
+					for (int i = 0; i < 5; i++)
+					{
+						printf("%d |",v1[i]);
+					}
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 10:
 				printf("Ex10 selecionado\n");
 				sleep(2);
+				printf("10. Fazer um programa que copie os elementos do vetor v1 em v2.\n");
+				sleep(2);
                 //code//
-
+					for (int i = 0; i < 5; i++)
+					{
+						v2[i] = v1[i];
+						printf("%d | ",v2[i]);
+					}
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 11:
 				printf("Ex11 selecionado\n");
 				sleep(2);
+				printf("11. Fazer um programa que copie os elementos invertidos do vetor v1 em v2, ou seja, o primeiro elemento de v1 será o último de v2.\n");
+				sleep(2);
                 //code//
-
+					for (int i = 4; i >= 0; i--)
+					{
+						v2[i] = v1[i];
+						printf("%d | ",v2[i]);
+					}
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 12:
 				printf("Ex12 selecionado\n");
 				sleep(2);
+				printf("12. Fazer um programa que ordene de forma crescente o vetor.");
+				sleep(2);
                 //code//
-
+					int var;
+					for (int i = 0; i < 5; i++)
+					{
+						for (int j = i; j < 5; j++) 
+						{  
+							if (v1[j] < v1[i])
+							{
+								var = v1[i];
+								v1[i] = v1[j];
+								v1[j] = var;
+							}
+						} 
+					}
+					for (int i = 0; i < 5; i++)
+					{
+						printf("%d |",v1[i]);
+					}    
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 13:
 				printf("Ex13 selecionado\n");
 				sleep(2);
+				printf("13. Fazer um programa que ordene  de forma decrescente o vetor.\n");
+				sleep(2);
                 //code//
 
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 14:
 				printf("Ex14 selecionado\n");
 				sleep(2);
+				printf("14. Fazer um programa que baseado na forma ('c' para crescente ou 'd' para decrescente) ordene na ordem solicitada.\n");
+				sleep(2);
                 //code//
 
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 15:
 				printf("Ex15 selecionado\n");
 				sleep(2);
+				printf("15. Fazer um programa que coloque nas posições mais a esquerda os valores pares e mais a direita os impares.\n");
+				sleep(2);
                 //code//
 
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 16:
 				printf("Ex16 selecionado\n");
 				sleep(2);
+				printf("16. Fazer um programa que retorne quantos elementos do vetor estão acima da média.\n");
+				sleep(2);
                 //code//
-
+						float ;
+					    for (int i = 0; i < 5; i++)
+						{
+							s = s + v1[i];
+						}
+					
+						r = s/5;
+						for (int i = 0; i < 5; i++)
+						{
+							if (v1[i] > r)
+							{
+								v2[i] = v1[i];
+							}
+							if (v2[i] > r )
+							{
+								n++;
+							}
+						}
+						printf("%d |",n);
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 17:
 				printf("Ex17 selecionado\n");
 				sleep(2);
+				printf("17. Fazer uma programa que retorne o elemento de maior valor do vetor.\n");
+				sleep(2);
                 //code//
-
+					x = v1[0];
+	
+					for(int i=1;i<4;i++){
+						if(v1[i] > x){
+							x = v1[i];
+						}
+					}
+					printf("O maior valor do vetor eh %d", x);
                 //code//
+				system("pause");
 				system("cls");
 			break;
 			case 0:
