@@ -1,18 +1,21 @@
 #include <stdio.h>
 int main(){
-    int v[5] = {45,-89,32,-12,33},var,i,con;
-    for (i = 0; i < 4; i++)
+    int v1[6] = {45,-89,32,-12,33},var;
+    for (int i = 0; i < 5; i++)
     {
-        for (int j=0; j < i-1 ;j++)
-        {
-
-            if (v[j] > v[j+1])
+        for (int j = i; j < 5; j++) 
+        {  
+            if (v1[j] < v1[i])
             {
-                v[j] = v[j+1];
+                var = v1[i];
+                v1[i] = v1[j];
+                v1[j] = var;
             }
-        }
-              
+        } 
     }
-    printf("%d",v);
-    
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d |",v1[i]);
+    }    
+   
 }

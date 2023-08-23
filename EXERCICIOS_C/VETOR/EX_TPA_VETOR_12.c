@@ -9,7 +9,7 @@ int main(){
             {
                 var = v1[i];
                 v1[i] = v1[j];
-                v1[i] = var;
+                v1[j] = var;
             }
         } 
     }
