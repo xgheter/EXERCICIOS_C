@@ -1,0 +1,22 @@
+- Uma sala tem cinco alunos.
+- Cada aluno é submetido a 3 provas
+- Calcular a media de cada aluno desconsiderando a menor nota.
+- Calcular a media da sala.
+- Verificar quantos alunos ficaram acima da média.
+- Informar a quantidade de alunos que tiveram ao menos um ZERO na nota.
+------------------------------------
+MENU:
+1 - Preencher as notas 
+2 - Preencher automaticamente as notas
+3 - Calcular as médias
+4 - Exibe as notas e médias
+5 - Calcular a média da sala e verificar quantos estao acima da media
+6 - Exibir quantos alunos tiraram ao menos um Zero
+------------------------------------
+** PLUS
+Caso escolha as opções 3, 4, 5 ou 6, verificar se as notas foram
+inseridas (opção 1 ou 2). Na negativa, informar: "Execute a opção 1 ou 2 primeiro)
+
+
+
+

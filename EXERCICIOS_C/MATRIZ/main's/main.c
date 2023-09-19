@@ -1,23 +1,27 @@
 #include <stdio.h>
-int main(){
-    int matriz[2][3],l,c;
-    for (l = 0; l <= 1; l++)
-    {
-        for (c = 0; c <= 2; c++)
-        {
-            printf("[%d][%d] = ", l , c);
-            scanf("%d", &matriz[l][c]);
-        }
-        
+#include <stdlib.h>
+#include <conio.h>
+int main(void) {
+  float matriz[6][3] = {0}, v[7], v1[7], media = 0, media2 = 0, L, C;
+  for (int L = 0; L <= 6; L++) {
+    for (int C = 0; C <= 2; C++) {
+      if (C != 1) {
+        printf("digite a nota:\n");
+        scanf("%f", &matriz[L][C]);
+      }
     }
-     printf("============\n");
-    for(l = 0; l <= 1; l++)
-	{
-		for(c = 0; c <= 2; c++)
-		{
-			printf("%d\t",  matriz[l][c]);
-		}
-		printf("\n");
-	}
-     printf("============");
+  }
+
+  for (int L = 0; L <= 6; L++) {
+    for (int C = 0; C <= 2; C++) {
+      if (C != 2) {
+        printf("%.2f\t", matriz[L][C]);
+      }
+      if (C == 2) {
+        printf("%.2f", v[L]);
+        printf("\n");
+      }
+    }
+  }
+  system("pause");
 }
